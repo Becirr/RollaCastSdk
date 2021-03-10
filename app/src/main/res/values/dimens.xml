@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- margins -->
+    <dimen name="x_small_margin">4dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="large_margin">24dp</dimen>
+    <dimen name="x_large_margin">32dp</dimen>
+
+    <!-- padding -->
+    <dimen name="x_small_padding">4dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="medium_padding">12dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="large_padding">24dp</dimen>
+    <dimen name="x_large_padding">32dp</dimen>
+
+    <!-- divider -->
+    <dimen name="divider_width">1dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+
+    <!-- text size -->
+    <dimen name="x_small_text_size">10sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="default_text_size">14sp</dimen>
+    <dimen name="medium_text_size">18sp</dimen>
+    <dimen name="large_text_size">24sp</dimen>
+    <dimen name="x_large_text_size">32sp</dimen>
+
+    <!-- radius -->
+    <dimen name="radius">16dp</dimen>
+</resources>

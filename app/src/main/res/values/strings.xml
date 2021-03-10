@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RollaCastSdk</string>
+    <string name="list_of_chromecast_devices">List of chromecast devices</string>
+    <string name="list_of_video_files">List of video files</string>
+    <string name="stop">Stop</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+</resources>

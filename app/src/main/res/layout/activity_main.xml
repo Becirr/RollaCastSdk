@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvListOfDevices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_padding"
+        android:text="@string/list_of_chromecast_devices"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <View
+        android:id="@+id/vDividerVertical"
+        android:layout_width="@dimen/divider_width"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/vDividerHorizontal2"
+        app:layout_constraintStart_toEndOf="@id/tvListOfDevices"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvListOfVideos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/default_padding"
+        android:text="@string/list_of_video_files"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/tvListOfDevices"
+        app:layout_constraintStart_toEndOf="@id/vDividerVertical"
+        app:layout_constraintTop_toTopOf="@id/tvListOfDevices"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <View
+        android:id="@+id/vDividerHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvListOfDevices" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDevices"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/vDividerHorizontal2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvListOfDevices"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVideos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/vDividerHorizontal2"
+        app:layout_constraintStart_toStartOf="@id/vDividerVertical"
+        app:layout_constraintTop_toBottomOf="@id/tvListOfVideos"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <View
+        android:id="@+id/vDividerHorizontal2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/llButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlayPause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:clickable="false"
+            android:text="@string/play"
+            app:backgroundTint="@color/purple_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:clickable="false"
+            android:text="@string/stop"
+            app:backgroundTint="@android:color/holo_red_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnPlayPause"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
